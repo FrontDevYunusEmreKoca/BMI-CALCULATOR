@@ -27,6 +27,7 @@ calculate.onclick = function CalculateBmi (){
         
     
         document.getElementById("result").innerText = result;
+        document.getElementById("result").innerText = result.toFixed(3);
     
         var result_underWieght = "Under Weight";
         var result_Normal = "Normal";
@@ -36,15 +37,19 @@ calculate.onclick = function CalculateBmi (){
         if (result < 18.5 ){
             
             document.getElementById("result_text").innerText = result_underWieght;
+            document.getElementById("result_text").style.color = "#007bff";
         }   
         else if (result >=  18.5 && result < 25){
             document.getElementById("result_text").innerText = result_Normal;
+            document.getElementById("result_text").style.color = "#28a745";
         }
         else if (result >=  25 && result < 30){
             document.getElementById("result_text").innerText = result_OverWeight;
+            document.getElementById("result_text").style.color = "#fd7e14";
         }  
         else {
             document.getElementById("result_text").innerText = result_Obese;
+            document.getElementById("result_text").style.color = "#dc3545";
         } 
     
     }
